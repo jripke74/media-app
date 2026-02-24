@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 app.post('/submit', async (req, res) => {
   const { title, release_year_dvd, release_year_movie } = req.body;
   try {
-    await pool.query('INSERT INTO dvds (title, release_year_dvd, release_year_movie) VALUES ($1, $2, $3)', [title, release_year_dvd, release_year_movie]);
+    await pool.query('INSERT INTO movies (title, release_year_dvd, release_year_movie) VALUES ($1, $2, $3)', [title, release_year_dvd, release_year_movie]);
     res.redirect('/dvds');
   } catch (err) {
     res.status(500).send('Error: ' + err.message);
@@ -29,8 +29,8 @@ app.post('/submit', async (req, res) => {
 
 app.get('/dvds', async (req, res) => {
   try {
-    const dvdTableData = await pool.query('SELECT * FROM movies');
-    for (let movie of dvdTableData.rows) {
+    const movieTableData = await pool.query('SELECT * FROM movies');
+    for (let movie of movieTableData.rows) {
       res.send(movie.title, movie.release_year_movie);
     }
   } catch (err) {
