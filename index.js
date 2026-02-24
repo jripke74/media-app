@@ -18,9 +18,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/submit', async (req, res) => {
-  const { title, releaseyeardvd, releaseyearmovie } = req.body;
+  const { title, release_year_dvd, release_year_movie } = req.body;
   try {
-    await pool.query('INSERT INTO dvds (title, releaseyeardvd, releaseyearmovie) VALUES ($1, $2, $3)', [title, releaseyeardvd, releaseyearmovie]);
+    await pool.query('INSERT INTO dvds (title, release_year_dvd, release_year_movie) VALUES ($1, $2, $3)', [title, release_year_dvd, release_year_movie]);
     res.redirect('/dvds');
   } catch (err) {
     res.status(500).send('Error: ' + err.message);
