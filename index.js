@@ -29,9 +29,9 @@ app.post('/submit', async (req, res) => {
 
 app.get('/dvds', async (req, res) => {
   try {
-    const dvdTableData = await pool.query('SELECT * FROM dvds');
-    for (let dvd of dvdTableData.rows) {
-      res.send(dvd.title, dvd.releaseyearmovie);
+    const dvdTableData = await pool.query('SELECT * FROM movies');
+    for (let movie of dvdTableData.rows) {
+      res.send(movie.title, movie.release_year_movie);
     }
   } catch (err) {
     res.status(500).send('Error: ' + err.message);
