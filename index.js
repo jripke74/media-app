@@ -32,7 +32,7 @@ app.get('/dvds', async (req, res) => {
     const movieTableData = await pool.query('SELECT * FROM movies');
     res.send('<ul>')
     for (let movie of movieTableData.rows) {
-      res.send(`<li>${movie.title}, Movie realease year: ${movie.release_year_movie}</li>`);
+      res.send(`<li>${movie.title}, Movie release year: ${movie.release_year_movie}</li>`);
     }
     res.send('</ul>')
   } catch (err) {

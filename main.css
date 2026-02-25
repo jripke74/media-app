@@ -16,6 +16,13 @@ main {
   background-color: #cec9c9;
 }
 
+fieldset {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
 input {
   margin: 5px;
 }
