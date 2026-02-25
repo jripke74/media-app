@@ -29,7 +29,7 @@ fieldset legend {
 }
 
 label {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
 }
 
 label:not(.dvd-type) {
@@ -54,7 +54,38 @@ input, input::placeholder, textarea {
   color: rgb(111, 110, 110);
 }
 
+.dvd-type-radio-btn {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  vertical-align: middle;
+}
+
+.dvd-type-radio-btn::before {
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(3px, 3px) scale(0);
+  transition: all 0.3s ease-in;
+}
+
+.dvd-type-radio-btn:checked::before {
+  transform: translate(.25px, .25px) scale(.60);
+  background-color: #919090;
+}
+
 button {
+  font-size: 1rem;
+  font-weight: 500;
   display: block;
   margin: 2px auto;
+  cursor: pointer;
+  background-color: lightgray;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
 }
