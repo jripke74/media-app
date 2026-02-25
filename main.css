@@ -50,6 +50,10 @@ input:not(.dvd-type-radio-btn), textarea {
   font-size: 1rem;
 }
 
+input, input::placeholder, textarea {
+  color: rgb(111, 110, 110);
+}
+
 button {
   display: block;
   margin: 2px auto;
