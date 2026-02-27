@@ -32,19 +32,32 @@
         <input type="number" id="release-year-dvd" name="release_year_movie" min="1900" max="2045" placeholder="YYYY" step="1" />
       </fieldset>
       <fieldset>
-        <legend>DVD Type</legend>
-        <label for="movie" class="dvd-type">Movie:</label>
-        <input type="radio" class="dvd-type-radio-btn" id="movie" name="dvd-type" value="movie" checked />
-        <label for="series" class="dvd-type">Series:</label>
-        <input type="radio" class="dvd-type-radio-btn" id="series" name="dvd-type" value="series" />
-        <label for="documentery" class="dvd-type">Documentary:</label>
-        <input type="radio" class="dvd-type-radio-btn" id="documentary" name="dvd-type" value="documentary" />
-        <label for="sports" class="dvd-type">Sports:</label>
-        <input type="radio" class="dvd-type-radio-btn" id="sports" name="dvd-type" value="sports" />
-        <label for="training" class="dvd-type">Training:</label>
-        <input type="radio" class="dvd-type-radio-btn" id="training" name="dvd-type" value="training" />
-        <label for="music" class="dvd-type">Music:</label>
-        <input type="radio" class="dvd-type-radio-btn" id="music" name="dvd-type" value="music" />
+        <legend>Format</legend>
+        <label for="uhd" class="radio-label">UHD:</label>
+        <input type="radio" class="radio-btn" id="uhd" name="format" value="uhd" />
+        <label for="blu-ray" class="radio-label">Blu-ray:</label>
+        <input type="radio" class="radio-btn" id="blu-ray" name="format" value="blu_ray" />
+        <label for="dvd" class="radio-label">DVD:</label>
+        <input type="radio" class="radio-btn" id="dvd" name="format" value="dvd" checked />
+        <label for="laserdisc" class="radio-label">LaserDisc:</label>
+        <input type="radio" class="radio-btn" id="laserdisc" name="format" value="laserdisc" />
+        <label for="vhs" class="radio-label">VHS:</label>
+        <input type="radio" class="radio-btn" id="vhs" name="format" value="vhs" />
+      </fieldset>
+      <fieldset>
+        <legend>Categories</legend>
+        <label for="movie" class="radio-label">Movie:</label>
+        <input type="radio" class="radio-btn" id="movie" name="categories" value="movie" checked />
+        <label for="series" class="radio-label">Series:</label>
+        <input type="radio" class="radio-btn" id="series" name="categories" value="series" />
+        <label for="documentery" class="radio-label">Documentary:</label>
+        <input type="radio" class="radio-btn" id="documentary" name="categories" value="documentary" />
+        <label for="sports" class="radio-label">Sports:</label>
+        <input type="radio" class="radio-btn" id="sports" name="categories" value="sports" />
+        <label for="training" class="radio-label">Training:</label>
+        <input type="radio" class="radio-btn" id="training" name="categories" value="training" />
+        <label for="music" class="radio-label">Music:</label>
+        <input type="radio" class="radio-btn" id="music" name="categories" value="music" />
       </fieldset>
       <fieldset>
         <legend>Notes</legend>

@@ -32,7 +32,7 @@ label {
   font-size: 1.0rem;
 }
 
-label:not(.dvd-type) {
+label:not(.radio-label) {
   display: block;
   margin: 10px 0;
 }
@@ -41,7 +41,7 @@ input {
   margin: 5px;
 }
 
-input:not(.dvd-type-radio-btn), textarea {
+input:not(.radio-btn), textarea {
   background-color: #dddbdb;
   width: 95%;
   border: 1px solid gray;
@@ -54,7 +54,7 @@ input, input::placeholder, textarea {
   color: rgb(111, 110, 110);
 }
 
-.dvd-type-radio-btn {
+.radio-btn {
   appearance: none;
   width: 15px;
   height: 15px;
@@ -63,7 +63,7 @@ input, input::placeholder, textarea {
   vertical-align: middle;
 }
 
-.dvd-type-radio-btn::before {
+.radio-btn::before {
   content: " ";
   display: block;
   width: 10px;
@@ -73,7 +73,7 @@ input, input::placeholder, textarea {
   transition: all 0.3s ease-in;
 }
 
-.dvd-type-radio-btn:checked::before {
+.radio-btn:checked::before {
   transform: translate(.25px, .25px) scale(.60);
   background-color: #919090;
 }
